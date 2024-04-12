@@ -22,4 +22,5 @@ oTrabajador = Trabajador(
     input("Categoría [A-B-C-D-E]: ").lower(), 
     int(input("Número de hijos: "))
 )
+
 print(oTrabajador)

@@ -1,5 +1,4 @@
 class Alumno:
-    res = ""
     def __init__(self, codigo, nombre, genero, n1, n2, n3, n4):
         self.codigo = codigo
         self.nombre= nombre
@@ -8,10 +7,8 @@ class Alumno:
         self.n2 = n2
         self.n3 = n3
         self.n4 = n4
-
     def promedio(self):
         return (self.n1 + self.n2 + self.n3 + self.n4)/4
-    
     def estado(self): 
         if self.promedio() < 5:
             return "Pésimo"
@@ -24,17 +21,14 @@ class Alumno:
         elif 17 <= self.promedio() < 19:
             return "Muy bueno"
         else:
-            return "Excelente"
-        
+            return "Excelente"       
     def obsequio(self):
         if self.promedio() < 18:
             return "\nSiga esforzandose"
         
         return "\nPor su esfuerzo, le obsequiamos un polo" if self.genero == "masculino" else "\nPor su esfuerzo, le obsequiamos un maletín"
-
     def __str__(self):
-        return self.estado() + self.obsequio()
-        
+        return self.estado() + self.obsequio()        
 oAlumno = Alumno(
     input("Código: "),
     input("Nombre: "),
